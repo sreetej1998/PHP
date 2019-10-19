@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<title>
+file1
+</title>
+</head>
+<?php
+    $f=fopen("include.txt","r");
+    print(fread($f,3)."<br>");
+    fclose($f);
+    $f=fopen("include.txt","r");
+    while(!feof($f))
+    {
+    print(fgetc($f)."  ");	
+    }
+    fclose($f);
+    $f=fopen("include.txt","r");
+    while(!feof($f))
+    {
+    print(fgets($f)."<br>");
+    }
+    fclose($f);
+?>
+</html>
